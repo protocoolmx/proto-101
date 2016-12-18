@@ -61,3 +61,12 @@ GeoAlchemy2: Provides extensions to SQLAlchemy for working with spatial database
 ```
 $ pip install geoalchemy2
 ```
+
+# Install and setup PostgreSQL
+
+To simplify just run the sh script file.
+
+```
+$ sudo su
+$ ./install_setup_postgres.sh
+```
