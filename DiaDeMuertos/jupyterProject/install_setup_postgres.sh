@@ -18,8 +18,8 @@ NC='\033[0m' # No Color
 PATH_BIN="/usr/bin/"
 PATH="layers"
 
-# # echo -e "${COLOR}Running sudo apt-get -y install postgresql postgresql-contrib postgis${NC}"
-# ${PATH_BIN}sudo apt-get -y install postgresql postgresql-contrib postgis pgadmin3
+echo -e "${COLOR}Running sudo apt-get -y install postgresql postgresql-contrib postgis${NC}"
+${PATH_BIN}sudo apt-get -y install postgresql postgresql-contrib postgis pgadmin3
 
 ${PATH_BIN}sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '123';"
 
