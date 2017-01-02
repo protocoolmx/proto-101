@@ -33,6 +33,8 @@ $ jupyter notebook
 
 Once jupyter notebook is running, we just open `GeoSpatial.ipynb` file.
 
+![screenshoot](screenshoot.png)
+
 # Libraries we need to install
 
 Ipyleaflet: A Jupyter / Leaflet bridge enabling interactive maps in the Jupyter notebook.
@@ -70,3 +72,5 @@ To simplify just run the sh script file.
 $ sudo su
 $ ./install_setup_postgres.sh
 ```
+
+
