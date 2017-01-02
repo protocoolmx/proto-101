@@ -23,11 +23,11 @@ PATH="layers"
 echo -e "${COLOR}Running sudo apt-get -y install postgresql postgresql-contrib postgis${NC}"
 ${sudo} apt-get -y install postgresql postgresql-contrib postgis pgadmin3
 
-${sudo} -u postgres psql -c "ALTER USER postgres WITH PASSWORD '123';"
+${sudo} -u postgres ${psql} -c "ALTER USER postgres WITH PASSWORD '123';"
 
 echo -e "${COLOR}Running psql CREATE DATABASE geospatial_ws1;${NC}"
-${sudo} -u postgres psql -c "DROP DATABASE IF EXISTS geospatial_ws1;"
-${sudo} -u postgres psql -c "CREATE DATABASE geospatial_ws1;"
+${sudo} -u postgres ${psql} -c "DROP DATABASE IF EXISTS geospatial_ws1;"
+${sudo} -u postgres ${psql} -c "CREATE DATABASE geospatial_ws1;"
 
 echo -e "${COLOR}Running psql CREATE EXTENSION postgis;${NC}"
 ${sudo} -u postgres ${psql} -d geospatial_ws1 -c "CREATE EXTENSION postgis;"
