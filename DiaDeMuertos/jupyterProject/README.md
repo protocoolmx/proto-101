@@ -1,3 +1,7 @@
+# GeoSpatial workshop
+
+This is just a small workshop of how to display spatial data from 2 different source; GeoJSON files and ESRI Shapefile (SHP) file in a database.
+
 # Jupyter Notebook
 
 ## Install Jupyter Notebook
@@ -17,7 +21,6 @@ $ virtualenv venv
 $ source venv/bin/activate
 ```
 **NOTE:** to `deactivate` type `deactivate`.
-
 
 Now we can to install Jupyter Notebook with pip.
 
@@ -45,13 +48,13 @@ $ jupyter nbextension enable --py --sys-prefix widgetsnbextension
 $ jupyter nbextension enable --py --sys-prefix ipyleaflet
 ```
 
-Sqlalchemy: is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.
+SQLAlchemy: is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.
 
 ```
 $ pip install sqlalchemy
 ```
 
-psycopg2: Is the most popular PostgreSQL adapter for the Python programming language.
+Psycopg: Is the most popular PostgreSQL adapter for the Python programming language.
 
 ```
 $ apt install libpq-dev python-dev
