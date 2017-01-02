@@ -15,20 +15,22 @@
 COLOR='\033[1;33m'
 NC='\033[0m' # No Color
 
-PATH_BIN="/usr/bin/"
+sudo=$(which sudo)
+psql=$(which psql)
+shp2pgsql=$(which shp2pgsql)
 PATH="layers"
 
-echo -e "${COLOR}Running sudo apt-get -y install postgresql postgresql-contrib postgis${NC}"
-${PATH_BIN}sudo apt-get -y install postgresql postgresql-contrib postgis pgadmin3
+# echo -e "${COLOR}Running sudo apt-get -y install postgresql postgresql-contrib postgis${NC}"
+# ${sudo} apt-get -y install postgresql postgresql-contrib postgis pgadmin3
 
-${PATH_BIN}sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '123';"
+# ${sudo} -u postgres psql -c "ALTER USER postgres WITH PASSWORD '123';"
 
-echo -e "${COLOR}Running psql CREATE DATABASE test;${NC}"
-${PATH_BIN}sudo -u postgres psql -c "DROP DATABASE IF EXISTS test;"
-${PATH_BIN}sudo -u postgres psql -c "CREATE DATABASE test;"
+echo -e "${COLOR}Running psql CREATE DATABASE geospatial_ws1;${NC}"
+${sudo} -u postgres psql -c "DROP DATABASE IF EXISTS geospatial_ws1;"
+${sudo} -u postgres psql -c "CREATE DATABASE geospatial_ws1;"
 
 echo -e "${COLOR}Running psql CREATE EXTENSION postgis;${NC}"
-${PATH_BIN}sudo -u postgres psql -d test -c "CREATE EXTENSION postgis;"
+${sudo} -u postgres ${psql} -d geospatial_ws1 -c "CREATE EXTENSION postgis;"
 
 echo -e "${COLOR}Importing puntos.shp file to posrgrest psql CREATE EXTENSION postgis;${NC}"
-${PATH_BIN}shp2pgsql -s 4326 $PATH/puntos.shp  public.puntos | PGPASSWORD=123 ${PATH_BIN}psql -q -d test -U postgres -h localhost
+${shp2pgsql} -s 4326 $PATH/puntos.shp  public.puntos | PGPASSWORD=123 ${psql} -q -d geospatial_ws1 -U postgres -h localhost
