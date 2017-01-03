@@ -32,5 +32,5 @@ ${sudo} -u postgres ${psql} -c "CREATE DATABASE geospatial_ws1;"
 echo -e "${COLOR}Running psql CREATE EXTENSION postgis;${NC}"
 ${sudo} -u postgres ${psql} -d geospatial_ws1 -c "CREATE EXTENSION postgis;"
 
-echo -e "${COLOR}Importing puntos.shp file to posrgrest psql CREATE EXTENSION postgis;${NC}"
+echo -e "${COLOR}Importing puntos.shp file to posrgrest${NC}"
 ${shp2pgsql} -s 4326 $PATH/puntos.shp  public.puntos | PGPASSWORD=123 ${psql} -q -d geospatial_ws1 -U postgres -h localhost
