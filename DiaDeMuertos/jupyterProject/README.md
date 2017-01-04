@@ -18,6 +18,7 @@ Before to install jupyter Notebook we are goint to create a virtualenv.
 ```
 $ pip install virtualenv
 $ virtualenv venv  
+$ cd DiaDeMuertos/jupyterProject
 $ source venv/bin/activate
 ```
 **NOTE:** to `deactivate` type `deactivate`.
@@ -57,7 +58,7 @@ $ pip install sqlalchemy
 Psycopg: Is the most popular PostgreSQL adapter for the Python programming language.
 
 ```
-$ apt install libpq-dev python-dev
+$ apt-get install libpq-dev python-dev
 $ pip install psycopg2
 ```
 
