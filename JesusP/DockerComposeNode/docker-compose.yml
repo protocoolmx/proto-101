@@ -1,0 +1,18 @@
+version: '2'
+services:
+  web:
+    build: ./test-project
+    depends_on:
+      - mysql
+    ports:
+     - "1337:1337"
+    links:
+      - mysql
+
+  mysql:
+    image: "mysql:5.7.15"
+    build: ./DB
+    environment:
+      MYSQL_ROOT_PASSWORD: "Pr0t0 ***5"
+    volumes:
+      - "/mysql"
