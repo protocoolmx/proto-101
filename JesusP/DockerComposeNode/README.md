@@ -11,6 +11,7 @@ $ sudo apt-get update
 $ sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
 $ sudo apt-get install docker-engine
 ```
+https://docs.docker.com/engine/installation/linux/ubuntulinux
 
 Start Docker daemon
 ```
@@ -33,7 +34,7 @@ After install Docker Engine and Docker Compose we are ready to run this demo by 
 ```
 $ docker-compose up
 ```
-Note: If you want to run your services in the background, you can pass the -d flag to docker-compose and the --build flag for rebuilding the project
+Note: If you want to run your services in the background, you can pass the -d flag to docker-compose and the --build flag for rebuilding the project, also you can add --abort-on-container-exit flag which stop docker-compose when some container exits. 
 
 ## Stop Demo
 
