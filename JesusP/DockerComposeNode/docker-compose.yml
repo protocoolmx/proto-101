@@ -8,7 +8,10 @@ services:
      - "1337:1337"
     links:
       - mysql
-
+    environment:
+      MySQL_PASS: 'password'
+      MySQL_USER: 'demo-user'
+    restart: always
   mysql:
     image: "mysql:5.7.15"
     build: ./DB
@@ -16,3 +19,4 @@ services:
       MYSQL_ROOT_PASSWORD: "Pr0t0 ***5"
     volumes:
       - "/mysql"
+    restart: always
