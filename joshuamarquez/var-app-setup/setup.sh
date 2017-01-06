@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/sh
 
 # First create dir where we will put out apps.
 sudo mkdir /var/app
