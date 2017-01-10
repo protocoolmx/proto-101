@@ -9,8 +9,8 @@ sudo addgroup web
 # Set user to "root" and group to "web".
 sudo chown -R root:web /var/app
 
-# Set 755 permission to all directories.
-sudo chmod -R 755 /var/app
+# Set 775 permission to all directories.
+sudo chmod -R 775 /var/app
 
 #Set the groud ID, so this way all new files and directories will inherit "web" group.
 sudo chmod g+s /var/app
