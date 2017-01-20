@@ -12,6 +12,11 @@ public class CalculatorTest {
 
     Calculator calculator;
 
+    /**
+     * Test sum method from Calculate class
+     *
+     * @throws Exception
+     */
     @Test
     public void sum() throws Exception {
 

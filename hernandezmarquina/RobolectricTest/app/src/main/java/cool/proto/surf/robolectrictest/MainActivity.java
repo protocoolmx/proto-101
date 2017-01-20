@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
     }
 
+    // Sum values from EditTexts
     public String sum() {
         return calculator.sum(Integer.parseInt(etNumOne.getText().toString()), Integer.parseInt(etNumTwo.getText().toString()));
     }

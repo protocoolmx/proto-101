@@ -14,9 +14,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-
         tvResult = (TextView) findViewById(R.id.tvResult);
-
 
         // Get result from MainActivity
         Bundle bundle = getIntent().getExtras();

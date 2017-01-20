@@ -50,6 +50,11 @@ public class MainActivityRobolectricTest {
         btnSubmit = (Button) activity.findViewById(R.id.btnSubmit);
     }
 
+    /**
+     * Check if the string in the view are correct
+     *
+     * @throws Exception
+     */
     @Test
     public void viewStrings() throws Exception {
 
@@ -58,6 +63,11 @@ public class MainActivityRobolectricTest {
         assertTrue("btnSubmit contains incorrect text", btnSubmit.getText().equals(activity.getResources().getString(R.string.str_submit)));
     }
 
+    /**
+     * Sum values from the EditTexts
+     *
+     * @throws Exception
+     */
     @Test
     public void sumTwoNumbers() throws Exception {
 
@@ -69,21 +79,25 @@ public class MainActivityRobolectricTest {
 
         // Set values in EditText
         setValues(value1, value2);
-
-
+        
         // Sum these numbers
         String sumExpected = activity.sum();
 
         assertTrue("Result is incorrect", sumExpected.equals(valueExpected));
     }
 
+    /**
+     * Test the complete app function.
+     *
+     * @throws Exception
+     */
     @Test
     public void calculate() throws Exception {
 
         int value1 = 10;
         int value2 = 10;
 
-        // Sum these numbers
+        // Sum numbers
         String valueExpected = Integer.toString(value1 + value2);
 
         // Set values in EditText
@@ -108,7 +122,12 @@ public class MainActivityRobolectricTest {
         assertTrue("Parameter is incorrect", result.equals(valueExpected));
     }
 
-
+    /**
+     * This method simulates the introduction of values by the user
+     *
+     * @param value1 first value to add
+     * @param value2 second value to add
+     */
     public void setValues(int value1, int value2) {
         // Add values
         num1.setText(value1 + "");
