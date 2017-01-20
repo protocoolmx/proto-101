@@ -29,7 +29,8 @@ Robolectric allows us to execute tests directly in the virtual machine of Java w
 
 Robolectric defines many shadow classes, which modify or extend the behavior of classes in the Android OS. When an Android class is instantiated, Robolectric looks for a corresponding shadow class, and if it finds one it creates a shadow object to associate with it. Every time a method is invoked on an Android class, Robolectric ensures that the shadow class' corresponding method is invoked first (if there is one), so it has a chance to work its magic. This applies to all methods, even static and final methods, because Robolectric is extra tricky!
 
-[Shadow classes](http://robolectric.org/extending/)
+[Shadows](http://robolectric.org/extending/)
+[Shadow classes](https://github.com/robolectric/robolectric/tree/master/robolectric-shadows/shadows-core/src/main/java/org/robolectric/shadows)
 
 
 First add the following to your build.gradle:
