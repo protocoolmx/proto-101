@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Robolectric test</string>
+    <string name="str_num_one">Num 1</string>
+    <string name="str_num_two">Num 2</string>
+    <string name="str_submit">submit</string>
+    <string name="str_default">0</string>
+</resources>
